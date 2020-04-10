@@ -346,7 +346,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: "", component: _components_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_3__["HomePageComponent"] },
+    { path: "kitty", component: _components_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_3__["HomePageComponent"] },
     { path: "register", component: _components_sign_up_form_sign_up_form_component__WEBPACK_IMPORTED_MODULE_5__["SignUpFormComponent"] },
     { path: "login", component: _components_sign_in_form_sign_in_form_component__WEBPACK_IMPORTED_MODULE_4__["SignInFormComponent"] },
 ];
@@ -633,7 +633,7 @@ let SignInFormComponent = class SignInFormComponent {
         const password = this.loginForm.get("password").value;
         this.userService.loginUser(login, password).subscribe(data => {
             this.userStore.loginUser(data);
-            this.router.navigate([""]).then();
+            this.router.navigate(["", "kitty"]).then();
         });
     }
     ngOnInit() {
@@ -732,7 +732,7 @@ let SignUpFormComponent = class SignUpFormComponent {
         };
         this.userService.registerNewUser(newUser).subscribe(data => {
             this.userStore.loginUser(data);
-            this.router.navigate([""]).then();
+            this.router.navigate(["", "kitty"]).then();
         });
     }
     checkLogin() {

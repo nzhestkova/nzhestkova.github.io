@@ -765,7 +765,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./src/app/components/sign-up-form/sign-up-form.component.ts");
 
     var routes = [{
-      path: "",
+      path: "kitty",
       component: _components_home_page_home_page_component__WEBPACK_IMPORTED_MODULE_3__["HomePageComponent"]
     }, {
       path: "register",
@@ -1245,7 +1245,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.userService.loginUser(login, password).subscribe(function (data) {
             _this3.userStore.loginUser(data);
 
-            _this3.router.navigate([""]).then();
+            _this3.router.navigate(["", "kitty"]).then();
           });
         }
       }, {
@@ -1394,7 +1394,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.userService.registerNewUser(newUser).subscribe(function (data) {
             _this4.userStore.loginUser(data);
 
-            _this4.router.navigate([""]).then();
+            _this4.router.navigate(["", "kitty"]).then();
           });
         }
       }, {

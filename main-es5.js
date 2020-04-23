@@ -899,7 +899,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var savedLogin = this.cookieService.checkUser();
           var savedPassword = this.cookieService.checkPassword();
-          console.log("cookie = ".concat(savedLogin, ", ").concat(savedPassword));
 
           if (savedLogin && savedPassword) {
             this.userService.loginUser(savedLogin, savedPassword).subscribe(function (data) {

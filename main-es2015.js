@@ -420,7 +420,6 @@ let AppComponent = class AppComponent {
     ngOnInit() {
         const savedLogin = this.cookieService.checkUser();
         const savedPassword = this.cookieService.checkPassword();
-        console.log(`cookie = ${savedLogin}, ${savedPassword}`);
         if (savedLogin && savedPassword) {
             this.userService.loginUser(savedLogin, savedPassword).subscribe(data => {
                 this.userStore.loginUser(data);

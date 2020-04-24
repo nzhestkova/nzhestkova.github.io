@@ -51,7 +51,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"background\" [ngClass]=\"{'light-theme': !darkThemeEnable, 'dark-theme': darkThemeEnable}\">\r\n  <div class=\"row-display\">\r\n    <div class=\"column-display center-aligned\">\r\n      <span *ngIf=\"user && user.username\" class=\"center-aligned\">Welcome, {{user.username}}!</span>\r\n      <span *ngIf=\"!user.username\" class=\"center-aligned\">Welcome!</span>\r\n    </div>\r\n    <div>\r\n      <button *ngIf=\"showSign\" class=\"sign-up\" routerLink=\"register\">Sign up</button>\r\n      <button *ngIf=\"showSign\" class=\"sign-in\" routerLink=\"login\">Sign in</button>\r\n      <button *ngIf=\"!showSign\" class=\"sign-up\" (click)=\"logout()\">Sign out</button>\r\n    </div>\r\n    <button class=\"theme\"\r\n            [ngClass]=\"{'light-theme-button': !darkThemeEnable, 'dark-theme-button': darkThemeEnable}\"\r\n            (click)=\"toggleTheme()\">\r\n      <span class=\"theme-icon\" *ngIf=\"darkThemeEnable\">💡</span>\r\n      <span class=\"theme-icon\" *ngIf=\"!darkThemeEnable\">🌙</span>\r\n    </button>\r\n  </div>\r\n  <router-outlet>\r\n  </router-outlet>\r\n  <div class=\"fixed-bottom vertical-small-padding row-display\">\r\n    <span class=\"center-aligned\">version ~1.1.1</span>\r\n  </div>\r\n</div>\r\n";
+    __webpack_exports__["default"] = "<div class=\"background\" [ngClass]=\"{'light-theme': !darkThemeEnable, 'dark-theme': darkThemeEnable}\">\r\n  <div class=\"row-display\">\r\n    <div class=\"column-display center-aligned\">\r\n      <span *ngIf=\"user && user.username\" class=\"center-aligned\">Welcome, {{user.username}}!</span>\r\n      <span *ngIf=\"!user.username\" class=\"center-aligned\">Welcome!</span>\r\n    </div>\r\n    <div>\r\n      <button *ngIf=\"showSign\" class=\"sign-up\" routerLink=\"register\">Sign up</button>\r\n      <button *ngIf=\"showSign\" class=\"sign-in\" routerLink=\"login\">Sign in</button>\r\n      <button *ngIf=\"!showSign\" class=\"sign-up\" (click)=\"logout()\">Sign out</button>\r\n    </div>\r\n    <button class=\"theme\"\r\n            [ngClass]=\"{'light-theme-button': !darkThemeEnable, 'dark-theme-button': darkThemeEnable}\"\r\n            (click)=\"toggleTheme()\">\r\n      <span class=\"theme-icon\" *ngIf=\"darkThemeEnable\">💡</span>\r\n      <span class=\"theme-icon\" *ngIf=\"!darkThemeEnable\">🌙</span>\r\n    </button>\r\n  </div>\r\n  <router-outlet>\r\n  </router-outlet>\r\n  <div class=\"fixed-bottom vertical-small-padding row-display\">\r\n    <span class=\"center-aligned\">~ {{specialSign}}</span>\r\n  </div>\r\n</div>\r\n";
     /***/
   },
 
@@ -846,25 +846,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _services_cookies_service_cookies_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../environments/environment */
+    "./src/environments/environment.ts");
+    /* harmony import */
+
+
+    var _services_cookies_service_cookies_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ./services/cookies-service/cookies.service */
     "./src/app/services/cookies-service/cookies.service.ts");
     /* harmony import */
 
 
-    var _services_user_service_user_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _services_user_service_user_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ./services/user-service/user.service */
     "./src/app/services/user-service/user.service.ts");
     /* harmony import */
 
 
-    var _store_services_theme_store_service_theme_store_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _store_services_theme_store_service_theme_store_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./store/services/theme-store.service/theme-store.service */
     "./src/app/store/services/theme-store.service/theme-store.service.ts");
     /* harmony import */
 
 
-    var _store_services_user_store_service_user_store_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _store_services_user_store_service_user_store_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ./store/services/user-store.service/user-store.service */
     "./src/app/store/services/user-store.service/user-store.service.ts");
 
@@ -878,6 +884,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.themeStore = themeStore;
         this.router = router;
         this.cdr = cdr;
+        this.specialSign = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].versionSign;
       }
 
       _createClass(AppComponent, [{
@@ -936,13 +943,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     AppComponent.ctorParameters = function () {
       return [{
-        type: _store_services_user_store_service_user_store_service__WEBPACK_IMPORTED_MODULE_6__["UserStoreService"]
+        type: _store_services_user_store_service_user_store_service__WEBPACK_IMPORTED_MODULE_7__["UserStoreService"]
       }, {
-        type: _services_user_service_user_service__WEBPACK_IMPORTED_MODULE_4__["UserService"]
+        type: _services_user_service_user_service__WEBPACK_IMPORTED_MODULE_5__["UserService"]
       }, {
-        type: _services_cookies_service_cookies_service__WEBPACK_IMPORTED_MODULE_3__["CookiesService"]
+        type: _services_cookies_service_cookies_service__WEBPACK_IMPORTED_MODULE_4__["CookiesService"]
       }, {
-        type: _store_services_theme_store_service_theme_store_service__WEBPACK_IMPORTED_MODULE_5__["ThemeStoreService"]
+        type: _store_services_theme_store_service_theme_store_service__WEBPACK_IMPORTED_MODULE_6__["ThemeStoreService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
       }, {
@@ -1631,12 +1638,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(CookiesService, [{
         key: "saveLogin",
         value: function saveLogin(login) {
-          this.cookie.set("login", login);
+          this.cookie.set("login", login, new Date(2999, 1, 1));
         }
       }, {
         key: "savePassword",
         value: function savePassword(password) {
-          this.cookie.set("password", password);
+          this.cookie.set("password", password, new Date(2999, 1, 1));
         }
       }, {
         key: "checkUser",
@@ -2374,7 +2381,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var environment = {
       production: false,
-      url: "https://mysterious-oasis-74963.herokuapp.com/"
+      url: "https://mysterious-oasis-74963.herokuapp.com/",
+      versionSign: "cookie"
     };
     /***/
   },

@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"userExist\" class=\"row-display user-data\">\r\n<!--      <a class=\"link center-aligned\" routerLink=\"\">← вернуться</a>-->\r\n  <div class=\"column-display\">\r\n    <div [ngClass]=\"{'window-light-theme': !darkTheme, 'window-dark-theme': darkTheme}\"\r\n         class=\"column-display right-aligned plate avatar\">\r\n      <img src=\"../../../assets/cat_avatar.png\" alt=\"cat\" class=\"user-data-ico\">\r\n      <span [appSetStatus]=\"{status: user.status, darkTheme: darkTheme}\"\r\n            class=\"center-aligned status\">{{user.status}}</span>\r\n      <span class=\"user-data-username center-aligned\">{{user.username}}</span>\r\n    </div>\r\n    <div [ngClass]=\"{'window-light-theme': !darkTheme, 'window-dark-theme': darkTheme}\"\r\n         class=\"column-display edit-plate avatar small-top-margin\">\r\n      <div [ngClass]=\"{'button-light-theme': !darkTheme, 'button-dark-theme': darkTheme}\"\r\n           class=\"relative-position row-display control-button first-button\">\r\n        <img src=\"../../../assets/settings.png\" alt=\"edit\" class=\"center-aligned smallest-icon button-icon\">\r\n        <span class=\"flex-grow button-title\">Настройки</span>\r\n      </div>\r\n      <div [ngClass]=\"{'button-light-theme': !darkTheme, 'button-dark-theme': darkTheme}\"\r\n           class=\"relative-position row-display control-button\">\r\n        <img src=\"../../../assets/notification.png\" alt=\"notification\" class=\"center-aligned smallest-icon button-icon\">\r\n        <span class=\"flex-grow button-title\">События</span>\r\n      </div>\r\n      <div [ngClass]=\"{'button-light-theme': !darkTheme, 'button-dark-theme': darkTheme}\" (click)=\"logout()\"\r\n           class=\"relative-position row-display control-button last-button\">\r\n        <img src=\"../../../assets/logout.png\" alt=\"notification\" class=\"center-aligned smallest-icon button-icon\">\r\n        <span class=\"flex-grow button-title red-button\">Выход</span>\r\n      </div>\r\n<!--      <div (click)=\"showPopup()\" [ngClass]=\"{'button-light-theme': !darkTheme, 'button-dark-theme': darkTheme}\"-->\r\n<!--           class=\"row-display control-button last-button\">-->\r\n<!--        <span class=\"flex-grow centered-text\">Удалить</span>-->\r\n<!--&lt;!&ndash;        <img src=\"../../../assets/edit.png\" alt=\"edit\" class=\"small-icon\">&ndash;&gt;-->\r\n<!--      </div>-->\r\n    </div>\r\n  </div>\r\n  <app-popup-confirm *ngIf=\"askConfirm\" (chosen)=\"deleteUser($event)\"\r\n                     [question]=\"confirmMessages.deleteAccountQuestion\"\r\n                     [info]=\"confirmMessages.deleteAccountInfo\"\r\n                     [confirm]=\"confirmMessages.deleteAccountConfirm\"\r\n                     [cancel]=\"confirmMessages.deleteAccountCancel\">\r\n  </app-popup-confirm>\r\n  <div [ngClass]=\"{'window-light-theme': !darkTheme, 'window-dark-theme': darkTheme}\"\r\n       class=\"column-display plate flex-grow small-right-margin\">\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"userExist\" class=\"row-display user-data\">\r\n<!--      <a class=\"link center-aligned\" routerLink=\"\">← вернуться</a>-->\r\n  <div class=\"column-display\">\r\n    <div [ngClass]=\"{'window-light-theme': !darkTheme, 'window-dark-theme': darkTheme}\"\r\n         class=\"column-display right-aligned plate avatar\">\r\n      <img [src]=\"user.status === 'god' ? '../../../assets/cat_god.png' : '../../../assets/cat_avatar.png'\"\r\n           alt=\"cat\" class=\"user-data-ico\">\r\n      <span [appSetStatus]=\"{status: user.status, darkTheme: darkTheme}\"\r\n            class=\"center-aligned status\">{{user.status}}</span>\r\n      <span class=\"user-data-username center-aligned\">{{user.username}}</span>\r\n    </div>\r\n    <div [ngClass]=\"{'window-light-theme': !darkTheme, 'window-dark-theme': darkTheme}\"\r\n         class=\"column-display edit-plate avatar small-top-margin\">\r\n      <div [ngClass]=\"{'button-light-theme': !darkTheme, 'button-dark-theme': darkTheme}\"\r\n           class=\"relative-position row-display control-button first-button\">\r\n        <img src=\"../../../assets/settings.png\" alt=\"edit\" class=\"center-aligned smallest-icon button-icon\">\r\n        <span class=\"flex-grow button-title\">Настройки</span>\r\n      </div>\r\n      <div [ngClass]=\"{'button-light-theme': !darkTheme, 'button-dark-theme': darkTheme}\"\r\n           class=\"relative-position row-display control-button\">\r\n        <img src=\"../../../assets/notification.png\" alt=\"notification\" class=\"center-aligned smallest-icon button-icon\">\r\n        <span class=\"flex-grow button-title\">События</span>\r\n      </div>\r\n      <div [ngClass]=\"{'button-light-theme': !darkTheme, 'button-dark-theme': darkTheme}\" (click)=\"logout()\"\r\n           class=\"relative-position row-display control-button last-button\">\r\n        <img src=\"../../../assets/logout.png\" alt=\"notification\" class=\"center-aligned smallest-icon button-icon\">\r\n        <span class=\"flex-grow button-title red-button\">Выход</span>\r\n      </div>\r\n<!--      <div (click)=\"showPopup()\" [ngClass]=\"{'button-light-theme': !darkTheme, 'button-dark-theme': darkTheme}\"-->\r\n<!--           class=\"row-display control-button last-button\">-->\r\n<!--        <span class=\"flex-grow centered-text\">Удалить</span>-->\r\n<!--&lt;!&ndash;        <img src=\"../../../assets/edit.png\" alt=\"edit\" class=\"small-icon\">&ndash;&gt;-->\r\n<!--      </div>-->\r\n    </div>\r\n  </div>\r\n  <app-popup-confirm *ngIf=\"askConfirm\" (chosen)=\"deleteUser($event)\"\r\n                     [question]=\"confirmMessages.deleteAccountQuestion\"\r\n                     [info]=\"confirmMessages.deleteAccountInfo\"\r\n                     [confirm]=\"confirmMessages.deleteAccountConfirm\"\r\n                     [cancel]=\"confirmMessages.deleteAccountCancel\">\r\n  </app-popup-confirm>\r\n  <div [ngClass]=\"{'window-light-theme': !darkTheme, 'window-dark-theme': darkTheme}\"\r\n       class=\"column-display plate flex-grow small-right-margin\">\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -1283,6 +1283,7 @@ let SetStatusDirective = class SetStatusDirective {
             violet: "#5f508d",
             green: "#478d41",
             yellow: "#8d8d43",
+            lightBlue: "#528ca2"
         };
         this.color = {
             white: "#ffffff",
@@ -1290,6 +1291,7 @@ let SetStatusDirective = class SetStatusDirective {
             green: "#3f7e3a",
             yellow: "#707034",
             black: "#000000",
+            lightBlue: "#528ca2",
         };
     }
     setColors() {
@@ -1307,6 +1309,10 @@ let SetStatusDirective = class SetStatusDirective {
             }
             case "developer": {
                 this.elementRef.nativeElement.style[changingProperty] = this[changingProperty].violet;
+                break;
+            }
+            case "god": {
+                this.elementRef.nativeElement.style[changingProperty] = this[changingProperty].lightBlue;
                 break;
             }
             default: {
@@ -1953,7 +1959,7 @@ __webpack_require__.r(__webpack_exports__);
 const environment = {
     production: false,
     url: "https://mysterious-oasis-74963.herokuapp.com/",
-    versionSign: "user profile update"
+    versionSign: "special update"
 };
 
 

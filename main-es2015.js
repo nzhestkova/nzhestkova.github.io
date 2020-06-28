@@ -4407,9 +4407,6 @@ let UserStoreService = class UserStoreService {
     loadTasks() {
         return this.store$.select(_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_6__["selectUserTasks"]);
     }
-    markNotificationsAsChecked() {
-        this.store$.dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_5__["markNotificationsAsChecked"])());
-    }
     loginUser(user) {
         this.store$.dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_5__["userLogin"])({ userInfo: user }));
     }

@@ -7710,11 +7710,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return this.store$.select(_selectors_user_selectors__WEBPACK_IMPORTED_MODULE_6__["selectUserTasks"]);
         }
       }, {
-        key: "markNotificationsAsChecked",
-        value: function markNotificationsAsChecked() {
-          this.store$.dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_5__["markNotificationsAsChecked"])());
-        }
-      }, {
         key: "loginUser",
         value: function loginUser(user) {
           this.store$.dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_5__["userLogin"])({
